@@ -16,7 +16,7 @@ import { EncoutersService } from './shared/services/encouters.service';
   providers: [AlienService, OccupationService, ColonistService, EncoutersService],
 })
 export class AppComponent {
-
+ 
   constructor(alienService: AlienService, occupationService: OccupationService, colonistService: EncoutersService, encoutersService: ColonistService){
   	console.log(alienService);
   	console.log(occupationService);

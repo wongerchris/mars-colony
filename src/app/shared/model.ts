@@ -4,11 +4,11 @@ export interface IEncounters {
 	type: string;
 }
 
-export interface IColonist {
-	name: string;
-	age: number;
-	job: IOccupation;
-}
+// export interface IColonist {
+// 	name: string;
+// 	age: number;
+// 	job: IOccupation;
+// }
 
 export interface IAlien{
 	type: string;
@@ -22,10 +22,10 @@ export interface IOccupation{
 
 // export class Encounters{
 // 	constructor(
-// 		private date: string,
 // 		public atype: string,
 // 		public action: string,
 // 		public colonist_id: string
+// 		private date: string,
 // 		){
 // 		this.date = this.formatDate;
 // 	}
@@ -33,16 +33,15 @@ export interface IOccupation{
 // 			let date = new Date();
 // 			return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
 // 		}	
-// }
+// }Col
 
-// export class Colonist{
+export class Colonist{
 
-// 	constructor(
-// 		name: string,
-// 		job_id: string,
-// 		age: number
-// 		){}
-	
-// }
+	constructor(
+		public name: string,	
+		public age: string,
+		public job_id: string
+		){}
+}
 
 

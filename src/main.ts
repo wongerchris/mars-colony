@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { HTTP_PROVIDERS } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
 
 import { HomeComponent } from './app/home';
 import { ArrivalComponent } from './app/arrival';
@@ -17,6 +18,7 @@ import { ReportComponent } from './app/report';
 @NgModule({
 	imports: [
 		BrowserModule,
+		FormsModule,
 		routing
 	],
 	providers: [

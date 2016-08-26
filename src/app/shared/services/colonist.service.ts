@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IColonist } from '../model';
+import { Colonist } from '../model';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
@@ -9,24 +9,24 @@ export class ColonistService{
 
 	constructor(private http:Http){};
 
-	getColonist(): Promise<IColonist[]> {
+	getColonist(): Promise<Colonist[]> {
     return this.http.get(this.colonistUrl)
                     .toPromise()
                     .then(response => response.json().colonists)
                     .catch(this.handleError);
 	}
 
- //    addColonist(colonist: Colonist): Promise<Colonist[]> {
+    newColonist(colonist: Colonist): Promise<Colonist[]> {
 
- //        let headers = new Headers({'Content-Type': 'application/json'});
- //        let body = JSON.stringify({ colonist });
+        let headers = new Headers({'Content-Type': 'application/json'});
+        let body = JSON.stringify({ colonist });
     
- //    return this.http
- //               .post(this.colonistUrl, body, { headers: headers })
- //               .toPromise()
- //               .then(response => response.json().colonist)
- //               .catch(this.handleError);
- //    }
+    return this.http
+               .post(this.colonistUrl, body, { headers: headers })
+               .toPromise()
+               .then(response => response.json().colonist)
+               .catch(this.handleError);
+    }
 
 	private handleError(error: any): Promise<void> {
         console.error('An error occurred', error);
