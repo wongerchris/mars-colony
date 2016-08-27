@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Encounter } from '../shared/model';
+import { Router } from '@angular/router';
+import { EncountersService } from '../shared/services/encounters.service';
 
 @Component({
   moduleId: module.id,
@@ -6,11 +9,20 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'encouters.component.html',
   styleUrls: ['encouters.component.css']
 })
-export class EncoutersComponent implements OnInit {
+export class EncoutersComponent {
 
-  constructor() { }
+	public encounters: Encounter[];
 
-  ngOnInit() {
+  constructor(
+  	private router: Router,
+  	private encounterService: EncountersService
+
+  	) { 
+
+  	encounterService.getEncounters().then( encounters => this.encounters = encounters)
+
   }
+
+
 
 }

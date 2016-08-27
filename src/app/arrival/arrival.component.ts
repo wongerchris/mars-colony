@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Colonist, IOccupation, IEncounters } from '../shared/model';
+import { Colonist, IOccupation, Encounter } from '../shared/model';
 import { ColonistService } from '../shared/services/colonist.service';
 import { OccupationService } from '../shared/services/occupation.service';
 import { Router } from '@angular/router';

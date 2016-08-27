@@ -1,0 +1,110 @@
+*{
+	box-sizing: border-box;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(108,196,23, 0.4);
+  }
+  70% {
+      box-shadow: 0 0 0 10px rgba(108,196,23, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(108,196,23, 0);
+  }
+}
+
+
+.container{
+	position: relative;
+	min-height: 100vh;
+	background:url(../../images/alien.jpg);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.mars-title{
+		color: #6CC417;
+		text-transform: uppercase;
+		font-family: 'Orbitron', sans-serif;
+		font-weight: 900;
+		font-size: 60px;
+		text-shadow:0 1px 0 #fff;
+		padding: 10px;
+		flex-basis: 20%;
+	}
+
+form {
+	width: 80%;
+	height: auto;
+	background-color: rgba(255,255,255,.3);
+	border-radius: 10px;
+	padding: 30px;
+	padding-bottom: 80px;
+}
+
+form div{
+	margin-bottom: 20px;
+}
+
+input, select{
+	width: 100%;
+	border: none;
+	font-family: 'Roboto Mono', monospace;
+	text-shadow:0 1px 0 #000;
+	font-size: 20px;
+	padding: 10px;
+	background-color: transparent;
+	border-bottom: 1px solid #000;
+	color: #6CC417;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	box-sizing: content-box;
+	margin-top: 15px;
+	&:focus{
+		outline: none;
+    border:1px solid #6CC417;
+    box-shadow: 0 0 10px #719ECE;
+	}
+
+}
+
+select{
+	color: #6CC417;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+button{
+	position: absolute;
+	background-color: transparent;
+	bottom: 50px;
+	left: 35%;
+	color: #6CC417;
+	text-transform: uppercase;
+	font-family: 'Orbitron', sans-serif;
+	padding: 20px;
+	letter-spacing: 2px;
+	width: 30%;
+	border-color: #6CC417;
+	&:hover{
+		background:linear-gradient(rgba(108,196,23,.5),rgba(0,0,0,.5));
+		color:#fff;
+		cursor: pointer;
+	}
+}
+
+.ng-invalid{
+	animation: pulse 1s ease-out;
+  animation-iteration-count: infinite; 
+}
+.ng-pristine{
+	animation: none;
+}
+	 
+
+
+

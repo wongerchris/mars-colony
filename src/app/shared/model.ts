@@ -1,14 +1,5 @@
 
-export interface IEncounters {
-	date: number;
-	type: string;
-}
 
-// export interface IColonist {
-// 	name: string;
-// 	age: number;
-// 	job: IOccupation;
-// }
 
 export interface IAlien{
 	type: string;
@@ -20,20 +11,20 @@ export interface IOccupation{
 	description: string;
 }
 
-// export class Encounters{
-// 	constructor(
-// 		public atype: string,
-// 		public action: string,
-// 		public colonist_id: string
-// 		private date: string,
-// 		){
-// 		this.date = this.formatDate;
-// 	}
-// 		get formatDate(): string {
-// 			let date = new Date();
-// 			return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
-// 		}	
-// }Col
+export class Encounter{
+	constructor(
+		public atype: string,
+		public action: string,
+		private date: string,
+		public colonist_id: string
+		){
+		this.date = this.formattedDate;
+	}
+		get formattedDate(): string {
+			let date = new Date();
+			return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+		}	
+}
 
 export class Colonist{
 
@@ -44,4 +35,14 @@ export class Colonist{
 		){}
 }
 
+// export interface IEncounters {
+// 	date: number;
+// 	type: string;
+// }
 
+
+// export interface IColonist {
+// 	name: string;
+// 	age: number;
+// 	job: IOccupation;
+// }
