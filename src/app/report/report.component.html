@@ -1,20 +1,32 @@
+
 <section class="container">
   
-  <h1 class="mars-title">Report Encounter</h1>
-  <p>Safety on Mars is your responsibility</p>
-	
-	
+ 	
+<header class="mars-title">
+	<h2>Recent Encounters</h2>
+  <p>See an Alien? Report it</p>
+</header>	
+
+<article>
+				
+				<p><i class="fa fa-reddit-alien" aria-hidden="true"></i> Select Your Alien</p>
+
 	<form (ngSubmit)="onSubmit()" name="reportForm" #reportForm="ngForm">
 	    
-	       <select name="type" [(ngModel)]="encounter.atype" required=""><br>
-				  <option value="(none)" selected>Select Alien Type</option>
-				  <option *ngFor="let o of aliens"  [value]="o.type">{{o.type}} </option>
+	       <select  [(ngModel)]="encounter.atype" name="atype" placeholder="Select Alien Type" required><br>
+				  
+				  <option *ngFor="let o of aliens"  [value]="o.type">{{o.type}}</option>
+
 			  </select>
+
 
 	 		<input type="text" name="report" placeholder="Take Action" [(ngModel)]="encounter.action" required>
 	 
 	    <button [disabled]="noEncounters || !reportForm.form.valid" type="submit">Submit</button>
 
 	</form>
-	
+
+</article>
+
 </section>
+

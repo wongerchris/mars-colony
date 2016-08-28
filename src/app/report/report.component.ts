@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
   templateUrl: 'report.component.html',
   styleUrls: ['report.component.css']
 })
+
 export class ReportComponent {
 	NO_ALIEN_SELECTED = `(none)`;
   
@@ -39,13 +40,8 @@ export class ReportComponent {
        });
      }
 
-     // updateEncounters(){
-     //   console.log('updating encounters');
-     //   this.encounters = new Encounters('','','',this.NO_ALIEN_SELECTED)
-     // }
-
      get noEncounters(){
-    return this.encounter.atype === this.NO_ALIEN_SELECTED;
+      return this.encounter.atype === this.NO_ALIEN_SELECTED;
     }
 
   	
