@@ -1,6 +1,4 @@
 
-
-
 export interface IAlien{
 	type: string;
 	description: string;
@@ -35,14 +33,3 @@ export class Colonist{
 		){}
 }
 
-// export interface IEncounters {
-// 	date: number;
-// 	type: string;
-// }
-
-
-// export interface IColonist {
-// 	name: string;
-// 	age: number;
-// 	job: IOccupation;
-// }
