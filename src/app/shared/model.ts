@@ -33,3 +33,7 @@ export class Colonist{
 		){}
 }
 
+export interface IPosts{
+	title: Object;
+	content: Object;
+}

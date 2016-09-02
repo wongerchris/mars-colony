@@ -5,6 +5,7 @@ import { AlienService } from './shared/services/aliens.service';
 import { OccupationService } from './shared/services/occupation.service';
 import { ColonistService } from './shared/services/colonist.service';
 import { EncountersService } from './shared/services/encounters.service';
+import { PostsService } from './shared/services/posts.service';
 
 
 @Component({
@@ -13,15 +14,16 @@ import { EncountersService } from './shared/services/encounters.service';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
   directives: [ROUTER_DIRECTIVES],
-  providers: [AlienService, OccupationService, ColonistService, EncountersService],
+  providers: [AlienService, OccupationService, ColonistService, EncountersService, PostsService],
 })
 export class AppComponent {
  
-  constructor(alienService: AlienService, occupationService: OccupationService, colonistService: EncountersService, encountersService: ColonistService){
+  constructor(alienService: AlienService, occupationService: OccupationService, colonistService: EncountersService, encountersService: ColonistService, postsService: PostsService){
   	console.log(alienService);
   	console.log(occupationService);
   	console.log(colonistService);
   	console.log(encountersService);
+    console.log(postsService);
   };
 }
 

@@ -14,6 +14,7 @@ import { HomeComponent } from './app/home';
 import { ArrivalComponent } from './app/arrival';
 import { EncoutersComponent } from './app/encouters';
 import { ReportComponent } from './app/report';
+import { PostsComponent } from './app/posts';
 
 @NgModule({
 	imports: [
@@ -30,7 +31,8 @@ import { ReportComponent } from './app/report';
 		HomeComponent,
 		ArrivalComponent,
 		EncoutersComponent,
-		ReportComponent
+		ReportComponent,
+		PostsComponent
 	],
 	exports: [ AppComponent ],
 	bootstrap: [ AppComponent ]
