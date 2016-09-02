@@ -13,7 +13,6 @@ export class EncountersService{
     return this.http.get(this.encountersUrl)
                     .toPromise()
                     .then(response => {
-                        // console.log(response);
                         return response.json().encounters})
                     .catch(this.handleError);
 	}
@@ -27,7 +26,6 @@ export class EncountersService{
                .post(this.encountersUrl, body, { headers: headers })
                .toPromise()
                .then(response => {
-                   // console.log(response);
                   return response.json().encounter
 
                })

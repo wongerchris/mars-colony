@@ -34,7 +34,7 @@ export class ReportComponent {
 
   	onSubmit(){
        this.encountersService.newEncounter(this.encounter).then(newEncounter => {
-         this.router.navigate(['/encouters']);
+         this.router.navigate(['/encounters']);
        }).catch(error =>{
          //TODO:Handle error
        });

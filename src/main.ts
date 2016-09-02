@@ -12,7 +12,7 @@ import { FormsModule }   from '@angular/forms';
 
 import { HomeComponent } from './app/home';
 import { ArrivalComponent } from './app/arrival';
-import { EncoutersComponent } from './app/encouters';
+import { EncountersComponent } from './app/encounters';
 import { ReportComponent } from './app/report';
 import { PostsComponent } from './app/posts';
 
@@ -30,7 +30,7 @@ import { PostsComponent } from './app/posts';
 		AppComponent,
 		HomeComponent,
 		ArrivalComponent,
-		EncoutersComponent,
+		EncountersComponent,
 		ReportComponent,
 		PostsComponent
 	],

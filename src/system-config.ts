@@ -39,7 +39,7 @@ const barrels: string[] = [
   'app/shared/services',
   'app/home',
   'app/arrival',
-  'app/encouters',
+  'app/encounters',
   'app/report',
   'app/posts',
   /** @cli-barrel */

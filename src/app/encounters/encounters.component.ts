@@ -5,11 +5,11 @@ import { EncountersService } from '../shared/services/encounters.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-encouters',
-  templateUrl: 'encouters.component.html',
-  styleUrls: ['encouters.component.css']
+  selector: 'app-encounters',
+  templateUrl: 'encounters.component.html',
+  styleUrls: ['encounters.component.css']
 })
-export class EncoutersComponent {
+export class EncountersComponent {
 
 	public encounters: Encounter[];
 
