@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { IPosts } from '../shared/model';
-import { Router } from '@angular/router';
 import { PostsService } from '../shared/services/posts.service';
 
 @Component({
@@ -13,7 +12,6 @@ export class PostsComponent {
 
 	public posts: IPosts;
   constructor(
-		private router: Router,
   	private postsService: PostsService
 
   	) { 

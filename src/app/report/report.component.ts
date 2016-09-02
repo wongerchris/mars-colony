@@ -37,13 +37,11 @@ export class ReportComponent {
          this.router.navigate(['/encounters']);
        }).catch(error =>{
          //TODO:Handle error
+         console.log("error test")
        });
      }
 
      get noEncounters(){
       return this.encounter.atype === this.NO_ALIEN_SELECTED;
     }
-
-  	
- 
 }
