@@ -23,22 +23,18 @@ export class ArrivalComponent {
   	private colonistService: ColonistService,
   	private occupationService: OccupationService
   	) {
-  	this.colonist = new Colonist('','',this.NO_OCCUPATION_SELECTED);
+  	this.colonist = new Colonist('','',this.NO_OCCUPATION_SELECTED,'');
   	occupationService.getOccupation().then(jobs => this.occupations = jobs);
 
   	 }
 
      onSubmit(){
        this.colonistService.newColonist(this.colonist).then(colonist => {
-         this.router.navigate(['/encounters']);
+          sessionStorage.setItem('colonist', colonist.id);
+          this.router.navigate(['/encounters']);
        }).catch(error =>{
          //TODO:Handle error
        });
-     }
-
-     updateColonist(){
-       console.log('updating colonist');
-       this.colonist = new Colonist('','',this.NO_OCCUPATION_SELECTED)
      }
 
      get noOccupation(){

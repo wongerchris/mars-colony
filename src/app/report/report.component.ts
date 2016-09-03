@@ -3,7 +3,6 @@ import { Encounter } from '../shared/model';
 import { IAlien } from '../shared/model';
 import { EncountersService } from '../shared/services/encounters.service';
 import { AlienService } from '../shared/services/aliens.service';
-
 import { Router } from '@angular/router';
 
 
@@ -19,7 +18,6 @@ export class ReportComponent {
   
   public encounter: Encounter;
   public aliens: IAlien[];
-	
 
   constructor(
 		private router: Router,
@@ -28,7 +26,7 @@ export class ReportComponent {
 
   	) {
 
-  	this.encounter = new Encounter('','','','100');
+  	this.encounter = new Encounter('','','',sessionStorage.getItem('colonist'));
   	alienService.getAliens().then(alien => this.aliens = alien);
   	}
 
@@ -37,7 +35,6 @@ export class ReportComponent {
          this.router.navigate(['/encounters']);
        }).catch(error =>{
          //TODO:Handle error
-         console.log("error test")
        });
      }
 

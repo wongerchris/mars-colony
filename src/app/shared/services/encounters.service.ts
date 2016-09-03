@@ -32,8 +32,6 @@ export class EncountersService{
                .catch(this.handleError);
     }
 
-
-
 	private handleError(error: any): Promise<void> {
         console.error('An error occurred', error);
         return Promise.reject(error.message || error);

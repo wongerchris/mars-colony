@@ -19,11 +19,6 @@ import { PostsService } from './shared/services/posts.service';
 export class AppComponent {
  
   constructor(alienService: AlienService, occupationService: OccupationService, colonistService: EncountersService, encountersService: ColonistService, postsService: PostsService){
-  	console.log(alienService);
-  	console.log(occupationService);
-  	console.log(colonistService);
-  	console.log(encountersService);
-    console.log(postsService);
   };
 }
 
