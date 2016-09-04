@@ -22,5 +22,9 @@ This project helped me understand the file structure and how the different compo
 ## Screen Shots
 ####Landing Page
 ![Alt text](./src/images/mars_home.jpg "Home Page")
+####Arrival Page
+![Alt text](./src/images/report.jpg "Report Page")
+####Encounters Page
+![Alt text](./src/images/encounters.jpg "Encounters Page")
 
 
