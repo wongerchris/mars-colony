@@ -15,7 +15,10 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root>Loading...</app-root>
+  <app-root class="load">
+  <p>Loading Mars Colony ...</p>
+  <img src="./images/loading-circle.gif" style="width:100px;height:100px;">
+  </app-root>
   
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
